@@ -1,5 +1,6 @@
 """
 Store the last 15 minutes of stock values for several companies
+
 Information is updated once per minute.
 """
 
@@ -17,6 +18,7 @@ from collections import deque
 
 # Local imports
 from util_logger import setup_logger
+from fetch import fetch_from_url
 
 # Set up logger
 logger, log_filename = setup_logger(__file__)
@@ -38,8 +40,11 @@ def lookup_ticker(company):
 # Takes ticker string and returns current stock price (asynchronous)
 async def get_stock_price(ticker):
     logger.info(f"Calling get_stock_price for {ticker}")
-    stock = yf.Ticker(ticker)
-    price = stock.info['currentPrice']
+    stock_api_url = f'https://query1.finance.yahoo.com/v7/finance/options/{ticker}'
+    logger.info(f"Calling fetch_from_url for {stock_api_url}")
+    result = await fetch_from_url(stock_api_url, "json")
+    logger.info(f'Data from openweathermap: {result}')
+    price = result.data['optionChain']['result'][0]['quote']['regularMarketPrice']
     # price = randint(132, 148)   # Use to test code without calling API
     return price
 
@@ -63,7 +68,7 @@ async def update_csv_stock():
         ]
         update_interval = 60  # Update every 1 minute (60 seconds)
         total_runtime = 15 * 60  # Total runtime maximum of 15 minutes
-        num_updates = 10  # Keep the most recent 10 readings
+        num_updates = 50  # Keep the most recent 10 readings for each location
         logger.info(f"update_interval: {update_interval}")
         logger.info(f"total_runtime: {total_runtime}")
         logger.info(f"num_updates: {num_updates}")
