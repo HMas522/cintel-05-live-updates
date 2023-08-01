@@ -28,10 +28,7 @@ logger, log_filename = setup_logger(__file__)
 def lookup_ticker(company):
     stocks_dictionary = {
         "Tesla Inc": "TSLA",
-        "General Motors Company": "GM",
-        "Toyota Motor Corporation": "TM",
-        "Ford Motor Company": "F",
-        "Honda Motor Co": "HMC",
+        "Starbucks Corporation": "SBUX",
     }
     ticker = stocks_dictionary[company]
     return ticker
@@ -61,10 +58,7 @@ async def update_csv_stock():
     try:
         companies = [
             "Tesla Inc",
-            "General Motors Company",
-            "Toyota Motor Corporation",
-            "Ford Motor Company",
-            "Honda Motor Co",
+            "Starbucks Corporation",
         ]
         update_interval = 60  # Update every 1 minute (60 seconds)
         total_runtime = 15 * 60  # Total runtime maximum of 15 minutes
