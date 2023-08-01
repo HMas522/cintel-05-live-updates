@@ -2,7 +2,7 @@
 
 - Repository: [cintel-05-live-updates](https://github.com/HMas522/cintel-05-live-updates)
 - Website: [cintel-05-live-updates](https://HMas522.github.io/cintel-05-live-updates/)
-- Author: [Denise Case](https://github.com/HMas522)
+- Author: [Hayley Massey](https://github.com/HMas522)
 
 -----
 

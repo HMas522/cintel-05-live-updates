@@ -28,13 +28,10 @@ def get_mtcars_inputs():
             selected="Temescal Valley CA",
         ),
         ui.input_select(
-            id="MTCARS_STOCK_SELECT",
-            label="Choose a company",
-            choices=["Starbucks Corporation",
-            "NIKE Inc",
-            "Amazon.com Inc.",
-            ],
-            selected = "Nordstrom Inc",
+            id='MTCARS_STOCK_SELECT',
+            label='Choose a company',
+            choices=['Tesla Inc', 'General Motors Company', 'Toyota Motor Corporation', 'Ford Motor Company', 'Honda Motor Co'],
+            selected='Honda Motor Co',
         ),
         ui.tags.hr(),
         ui.tags.section(
