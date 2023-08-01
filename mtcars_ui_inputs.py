@@ -24,8 +24,8 @@ def get_mtcars_inputs():
         ui.input_select(
             id="MTCARS_LOCATION_SELECT",
             label="Choose a location",
-            choices=["Temescal Valley CA", "Bothell WA" , "Scottsdale AZ"],
-            selected="Temescal Valley CA",
+            choices=["ELY MN", "Death Valley CA", "Maryville MO"],
+            selected="Maryville MO",
         ),
         ui.input_select(
             id='MTCARS_STOCK_SELECT',
