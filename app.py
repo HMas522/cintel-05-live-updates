@@ -36,7 +36,7 @@ async def update_csv_files():
         logger.info("Calling continuous updates ...")
         task1 = asyncio.create_task(update_csv_location())
         task2 = asyncio.create_task(update_csv_stock())
-        await asyncio.gather(task1, task2)
+        await asyncio.gather(task1,task2)
         await asyncio.sleep(60)  # wait for 60 seconds
 
 app_ui = ui.page_navbar(
@@ -48,15 +48,14 @@ app_ui = ui.page_navbar(
             get_mtcars_outputs(),
         ),
     ),
-    ui.nav(ui.a("About", href="https://github.com/HMas522")),
-    ui.nav(ui.a("GitHub", href="https://github.com/HMas522/cintel-05-live-updates")),
-    ui.nav(ui.a("App", href="https://HMas522.shinyapps.io/cintel-05-live-updates/")),
+    ui.nav(ui.a("About", href="https://github.com/Hms522")),
+    ui.nav(ui.a("GitHub", href="https://github.com/Hms522/cintel-05-live-updates")),
+    ui.nav(ui.a("App", href="https://Hms522.shinyapps.io/cintel-05-live-updates/")),
     ui.nav(ui.a("Plotly Express", href="https://plotly.com/python/line-and-scatter/")),
     ui.nav(ui.a("WeatherAPI", href="https://openweathermap.org/api")),
     ui.nav(ui.a("OneCallAPI", href="https://openweathermap.org/api/one-call-3")),
-    ui.nav(ui.a('YFinanceAPI', href='https://pypi.org/project/yfinance/')),
     ui.nav(ui.a("File_Reader", href="https://shiny.rstudio.com/py/api/reactive.file_reader.html")),
-    title=ui.h1("HMas522 Dashboard"),
+    title=ui.h1("Hms522 Dashboard"),
 )
 
 
