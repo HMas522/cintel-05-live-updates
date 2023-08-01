@@ -1,4 +1,4 @@
-"Company","Ticker","Time","Stock_Price"
+Company,Ticker,Time,Stock_Price
 Starbucks Corporation,SBUX,2023-07-30 12:12:42,101.25
 NIKE Inc.,NKE,2023-07-30 12:12:42,108.62
 Amazon.com Inc.,AMZN,2023-07-30 12:12:42,131.21
