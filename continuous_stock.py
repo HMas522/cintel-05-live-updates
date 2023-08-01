@@ -46,8 +46,6 @@ async def update_csv_stock():
     logger.info("Calling update_csv_stock")
     try:
         companies = [
-        "Nordstrom Inc.",
-        "Lululemon Athletica Inc.",
         "Starbucks Corporation",
         "NIKE Inc",
         "Amazon.com Inc.",
@@ -63,7 +61,7 @@ async def update_csv_stock():
         # Use a deque to store just the last, most recent 10 readings in order
         records_deque = deque(maxlen=num_updates)
 
-        fp = Path(__file__).parent.joinpath("data").joinpath("mtcars_stocks.csv")
+        fp = Path(__file__).parent.joinpath("data").joinpath("mtcars_stock.csv")
 
         # Check if the file exists, if not, create it with only the column headings
         if not os.path.exists(fp):
