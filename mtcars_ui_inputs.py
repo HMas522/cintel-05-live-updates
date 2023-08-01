@@ -30,9 +30,7 @@ def get_mtcars_inputs():
         ui.input_select(
             id="MTCARS_STOCK_SELECT",
             label="Choose a company",
-            choices=["Nordstrom Inc.",
-            "Lululemon Athletica Inc.",
-            "Starbucks Corporation",
+            choices=["Starbucks Corporation",
             "NIKE Inc",
             "Amazon.com Inc.",
             ],

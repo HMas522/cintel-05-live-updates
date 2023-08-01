@@ -16,8 +16,6 @@ logger, log_filename = setup_logger(__file__)
 
 def lookup_ticker(company):
     stocks_dictionary = {
-        "Nordstrom Inc": "JWN",
-        "Lululemon Athletica Inc.": "LULU",
         "Starbucks Corporation": "SBUX",
         "NIKE Inc.": "NKE",
         "Amazon.com Inc.": "AMZN",
