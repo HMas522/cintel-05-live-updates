@@ -14,6 +14,8 @@ def get_mtcars_outputs():
         ui.tags.hr(),
         ui.tags.section(
             ui.h3("Welcome_output"),
+            ui.output_text_verbatim("welcome_output"),
+            ui.tags.hr(),
             ui.tags.br(),
             ui.h3("Continuous Updates (Weather API)"),
             ui.tags.br(),
