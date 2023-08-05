@@ -121,7 +121,7 @@ async def update_csv_location():
             for location in locations:
                 lat, long = lookup_lat_long(location)
                 new_temp = await get_temperature_from_openweathermap(lat, long)
-                time_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # Current time
+                time_now = datetime.now().strftime("%Y-%m-%D %H:%M:%S")  # Current time
                 new_record = {
                     "Location": location,
                     "Latitude": lat,
