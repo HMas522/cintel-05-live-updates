@@ -100,6 +100,13 @@ def get_mtcars_server_functions(input, output, session):
 
     @output
     @render.text
+    def welcome_output():
+        user = input.name_input()
+        welcome_string = f'Greetings {user}!'
+        return welcome_string
+
+    @output
+    @render.text
     def mtcars_record_count_string():
         filtered_df = reactive_df.get()
         filtered_count = len(filtered_df)

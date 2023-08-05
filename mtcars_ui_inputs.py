@@ -12,14 +12,10 @@ from shiny import ui
 
 def get_mtcars_inputs():
     return ui.panel_sidebar(
-        ui.h2("MT Cars Interaction"),
+        ui.h2("Location and Stocks"),
         ui.tags.hr(),
-        ui.input_slider(
-            "MTCARS_MPG_RANGE",
-            "Miles Per Gallon (MPG)",
-            min=10,
-            max=35,
-            value=[10, 35],
+         ui.h3("User Interaction Here"),
+                ui.input_text("name_input", "Enter your name", placeholder="Your Name"
         ),
         ui.input_select(
             id="MTCARS_LOCATION_SELECT",
