@@ -17,6 +17,13 @@ def get_mtcars_inputs():
          ui.h3("User Interaction Here"),
                 ui.input_text("name_input", "Enter your name", placeholder="Your Name"
         ),
+        ui.input_slider(
+            "MTCARS_MPG_RANGE",
+            "Miles Per Gallon (MPG)",
+            min=10,
+            max=35,
+            value=[10, 35],
+        ),
         ui.input_select(
             id="MTCARS_LOCATION_SELECT",
             label="Choose a location",
